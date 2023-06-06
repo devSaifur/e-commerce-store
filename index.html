@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="scripts/index.js" defer></script>
+  
+  <title>E-commerce product page</title>
+
+</head>
+<body>
+  <div class="navbar">
+    <div class="hamburger-menu">
+      <img class="menu-icon open" data-menu="open" src="images/icon-menu.svg" alt="">
+      <img class="menu-icon close" data-menu="close" src="images/icon-close.svg" alt="">
+    </div>
+
+    <div class="nav-section">
+      <div class="logo">
+        <img src="images/logo.svg" alt="">
+      </div>
+  
+      <nav class="nav">
+        <ul>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="user">
+      <img class="user-cart" src="images/icon-cart.svg" alt="">
+      <img class="user-img" src="images/image-avatar.png" alt="">
+      <p class="cart-amount">0</p>
+
+      <div class="cart">
+        <p class="cart-title">
+          Cart
+        </p>
+
+        <div class="cart-empty">
+          <p>
+            Your Cart is empty
+          </p>
+        </div>
+
+        <div class="cart-contains">
+          <div class="cart-item">
+            <div class="cart-item-img">
+              <img src="images/image-product-1-thumbnail.jpg" alt="">
+            </div>
+
+            <div class="cart-item-info">
+              <p class="cart-item-name">
+                Fall Limited Edition Sneakers
+              </p>
+              <p class="cart-price">
+                <span class="price">$125.00 x 0</span> <span class="total-price">$00.00</span>
+              </p>
+            </div>
+
+            <div>
+              <img class="cart-delete-btn" src="images/icon-delete.svg" alt="">
+            </div>
+          </div>
+
+          <div>
+            <button>Checkout</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <div class="carousel" data-carousel>
+
+      <div class="slides" data-slides>
+        <div class="slide" data-active>
+          <img class="activeted-img" src="images/image-product-1.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="images/image-product-2.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="images/image-product-3.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="images/image-product-4.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="thumbnails">
+        <img class="thumbnail" src="images/image-product-1-thumbnail.jpg" alt="">
+        <img class="thumbnail" src="images/image-product-2-thumbnail.jpg" alt="">
+        <img class="thumbnail" src="images/image-product-3-thumbnail.jpg" alt="">
+        <img class="thumbnail" src="images/image-product-4-thumbnail.jpg" alt="">
+      </div>
+
+      <img class="slide-btn prev" data-carousel-btn="prev" src="images/icon-previous.svg" alt="">
+      <img class="slide-btn next" data-carousel-btn="next" src="images/icon-next.svg" alt="">
+    </div>
+
+    <div id="overlay"></div>
+
+    <div class="carousel full-view" id="carosel-full-view">
+      <div class="carousel" data-carousel>
+
+        <img class="overlay-close" src="images/icon-close.svg" alt="">
+
+        <div class="slides" data-slides>
+          <div class="slide" data-active>
+            <img class="activeted-img" src="images/image-product-1.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="images/image-product-2.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="images/image-product-3.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="images/image-product-4.jpg" alt="">
+          </div>
+        </div>
+  
+        <div class="thumbnails">
+          <img class="thumbnail" src="images/image-product-1-thumbnail.jpg" alt="">
+          <img class="thumbnail" src="images/image-product-2-thumbnail.jpg" alt="">
+          <img class="thumbnail" src="images/image-product-3-thumbnail.jpg" alt="">
+          <img class="thumbnail" src="images/image-product-4-thumbnail.jpg" alt="">
+        </div>
+  
+        <img class="slide-btn prev" data-carousel-btn="prev" src="images/icon-previous.svg" alt="">
+        <img class="slide-btn next" data-carousel-btn="next" src="images/icon-next.svg" alt="">
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="product-info">
+        <p class="title">Sneaker Company</p>
+        <h1>
+          Fall Limited Edition Sneakers
+        </h1>
+        <p class="details">
+          These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.
+        </p>
+      </div>
+
+      <div class="price">
+        <div>
+          <h1>$125.00</h1>
+          <p>50%</p>
+        </div>
+        <div>
+          <p>$250.00</p>
+        </div>
+      </div>
+
+      <div class="quantity">
+        <div>
+          <img id="minus-btn" src="images/icon-minus.svg" alt="">
+          <p id="number-of-item">0</p>
+          <img id="plus-btn" src="images/icon-plus.svg" alt="">
+        </div>
+        <div>
+          <button id="add-cart-btn">
+            <ion-icon name="cart-outline"></ion-icon>
+            Add to cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
