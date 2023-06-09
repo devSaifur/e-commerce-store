@@ -2,7 +2,7 @@ const carouselBtn = document.querySelectorAll("[data-carousel-btn]")
 const menuIcon = document.querySelectorAll(".menu-icon")
 const menuOpen = document.querySelector(".menu-icon.open")
 const menuClose = document.querySelector(".menu-icon.close")
-const nav = document.querySelector(".nav")
+const nav = document.querySelector(".nav").children
 const thumbnails = document.querySelectorAll(".thumbnail")
 const activeImages = document.querySelectorAll(".activeted-img")
 const cart = document.querySelector(".cart")
@@ -46,12 +46,12 @@ menuIcon.forEach(icon => {
             menuOpen.style.display = "none"
             menuClose.style.display = "block"
 
-            nav.style.display = "flex"
+            nav[0].classList.toggle("active")
         } else if (icon.dataset.menu === "close") {
             menuOpen.style.display = "block"
             menuClose.style.display = "none"
 
-            nav.style.display = "none"
+            nav[0].classList.toggle("active")
         }
     })
 })

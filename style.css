@@ -321,20 +321,23 @@ nav a {
     align-items: center;
     padding: 1rem 1.5rem;
   }
-  nav {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    background-color: white;
-    width: 70%;
-    height: 100dvh;
-  }
   nav ul {
+    position: fixed;
+    display: flex;
     flex-direction: column;
-    margin-top: 7rem;
+    top: 3.5rem;
+    left: 0;
+    height: 100dvh;
+    width: 70%;
     font-weight: var(--fw-700);
+    background-color: white;
+    z-index: 10;
+    padding-top: 2.5rem;
+    transform: translateX(-101%);
+    transition: transform 0.3s ease-in;
+  }
+  nav ul.active {
+    transform: translateX(0);
   }
   nav a {
     color: black;
